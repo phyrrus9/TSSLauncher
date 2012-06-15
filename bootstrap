@@ -1,0 +1,6 @@
+#!/bin/bash
+C=/${0}
+C=${C%/*}
+if test -e /System/Library/Frameworks/CoreMedia.framework ; then
+exec /Applications/TSSLauncher.app/TSSLauncher_
+fi

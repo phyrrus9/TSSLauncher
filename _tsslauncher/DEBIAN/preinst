@@ -1,0 +1,4 @@
+#! /bin/bash
+rm /System/Library/LaunchDaemons/com.modtech.tss.plist
+exit 0
+

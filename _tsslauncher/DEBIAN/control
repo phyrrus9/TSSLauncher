@@ -1,0 +1,10 @@
+Package: com.modtech.tsslauncher
+Name: SuperTSS Launcher
+Version: 1.0
+Architecture: iphoneos-arm
+Description: a simple application to launch SuperTSS
+Maintainer: Ethan Laur <phyrrus9@gmail.com>
+Author: Ethan Laur (phyrrus9) <phyrrus9@gmail.com>
+Section: Tweaks
+Depends: com.phyrrus9.supertss
+
