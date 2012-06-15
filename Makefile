@@ -8,3 +8,6 @@ all:
 	chmod +s ./_tsslauncher/Applications/TSSLauncher.app/TSSLauncher_
 	dpkg -b ./_tsslauncher
 	mv ./_tsslauncher.deb ./tsslauncher.deb
+imod: all
+	cp -R ./_tsslauncher/Applications ../imod3g
+	cp -R ./_tsslauncher/usr ../imod3g
