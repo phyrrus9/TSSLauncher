@@ -1,4 +1,5 @@
 #! /bin/bash
+echo "rm launchdaemon, if this says file not exist, thats good/normal"
 rm /System/Library/LaunchDaemons/com.modtech.tss.plist
 exit 0
 

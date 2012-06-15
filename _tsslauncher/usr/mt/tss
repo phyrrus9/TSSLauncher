@@ -1,0 +1,71 @@
+#!/bin/sh
+if [ "$(id -u)" != "0" ]; then
+   echo "Error! Must be run as root!" 1>&2
+   exit 1
+fi
+#wait for device boot
+#sleep 30
+PATH=$PATH":/usr/mt"
+echo Setting up sandbox
+alias mecho=mtssecho
+x=0
+#while [ $x -lt 1 ]
+#do
+mecho "SuperTSS Copyright (C) 2012 Mod Technologies"
+mecho "App credit phyrrus9 <phyrrus9@gmail.com>"
+date
+date >> /var/mobile/com.modtech.tsslog
+mecho Device identifier:
+uiduid
+uiduid >> /var/mobile/com.modtech.tsslog
+hostinfo
+hostinfo >> /var/mobile/com.modtech.tsslog
+mecho getting list of TSS blobs
+TSSAgent -l > /var/mobile/.tss/tss
+mecho filtering TSS:
+mecho "-->iPhone OS 3"
+grep "3\." /var/mobile/.tss/tss > /var/mobile/.tss/list
+mecho "-->iPhone OS 4"
+grep "4\." /var/mobile/.tss/tss >> /var/mobile/.tss/list
+mecho "-->iPhone OS 5"
+grep "5\." /var/mobile/.tss/tss >> /var/mobile/.tss/list
+mecho "-->iPhone OS 6"
+grep "6\." /var/mobile/.tss/tss >> /var/mobile/.tss/list
+mecho Generating TSS list from blobs
+tr -d '\t <string>/' < /var/mobile/.tss/list > /var/mobile/.tss/tss.list
+mecho TSS blobs fetched for iPhone OS:
+cat /var/mobile/.tss/tss.list
+cat /var/mobile/.tss/tss.list >> /var/mobile/com.modtech.tsslog
+mecho Fetching new blobs from apple and submitting them
+mecho "-->iPhone OS 3.0"
+TSSAgent -p 3.0 > /dev/null
+mecho "-->iPhone OS 3.1.2"
+TSSAgent -p 3.1.2 > /dev/null
+mecho "-->iPhone OS 3.1.3"
+TSSAgent -p 3.1.3 > /dev/null
+mecho "-->iPhone OS 4.0"
+TSSAgent -p 4.0 > /dev/null
+mecho "-->iPhone OS 4.1"
+TSSAgent -p 4.1 > /dev/null
+mecho "-->iPhone OS 4.2.1"
+TSSAgent -p 4.2.1 > /dev/null
+mecho "-->iPhone OS 4.3.3"
+TSSAgent -p 4.3.3 > /dev/null
+mecho "-->iPhone OS 4.3.5"
+TSSAgent -p 4.3.5 > /dev/null
+mecho "-->iPhone OS 5.0"
+TSSAgent -p 5.0 > /dev/null
+mecho "-->iPhone OS 5.1"
+TSSAgent -p 5.1 > /dev/null
+mecho "-->iPhone OS 5.1.1"
+TSSAgent -p 5.1.1 > /dev/null
+mecho "Updating …"
+apt-get -y --force-yes install com.phyrrus9.supertss
+mecho Sleeping for five minutes
+sleep 300
+mecho " "
+mecho " "
+mecho " "
+x=2
+#done
+/usr/mt/tss
