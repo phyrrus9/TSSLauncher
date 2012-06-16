@@ -6,7 +6,7 @@
 	<dict>
 		<key>Info.plist</key>
 		<data>
-		+M8pBDubZwMSo8m1NaHTHSY4JEI=
+		YK+xRaayak6lCIiu0LDQrEVG3PA=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -15,6 +15,10 @@
 		<key>TSSLauncher.xcent</key>
 		<data>
 		VImmgOM9t3BxyDfzFi7OPmrIBqI=
+		</data>
+		<key>appicon.png</key>
+		<data>
+		n1PuyOUS14k6SU5e64CDMgxWAgY=
 		</data>
 		<key>en.lproj/InfoPlist.strings</key>
 		<dict>
@@ -29,7 +33,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			rrDlEvVB97kQ1MsAsc5bc8hd7lE=
+			V4ba8M/qrgmemBoM/XiQJrLf69s=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -47,7 +51,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			4QPTtp15rgB5kH8aAvvlzZVFyNE=
+			YzLuYrztcv7cknEOLkQhwrWILfk=
 			</data>
 			<key>optional</key>
 			<true/>

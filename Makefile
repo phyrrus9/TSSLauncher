@@ -4,6 +4,7 @@ all:
 	rm -rf ./build
 	mv ./_tsslauncher/Applications/TSSLauncher.app/TSSLauncher ./_tsslauncher/Applications/TSSLauncher.app/TSSLauncher_
 	cp ./bootstrap ./_tsslauncher/Applications/TSSLauncher.app/TSSLauncher
+	chown root ./_tsslauncher/Applications/TSSLauncher.app/TSSLauncher_
 	chmod +x ./_tsslauncher/Applications/TSSLauncher.app/TSSLauncher
 	chmod +s ./_tsslauncher/Applications/TSSLauncher.app/TSSLauncher_
 	dpkg -b ./_tsslauncher
